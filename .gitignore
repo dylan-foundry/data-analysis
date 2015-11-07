@@ -1,0 +1,4 @@
+_build
+*.hdp
+deft-package-local.json
+documentation/build

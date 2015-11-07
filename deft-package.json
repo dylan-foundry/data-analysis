@@ -1,0 +1,11 @@
+{
+  "name": "statistics",
+  "description": "",
+  "keywords": [
+  ],
+  "license": "MIT",
+  "default-target": "statistics",
+  "tests": [
+    "statistics-test-suite-app"
+  ]
+}
