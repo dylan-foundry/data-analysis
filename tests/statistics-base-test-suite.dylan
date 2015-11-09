@@ -7,6 +7,12 @@ define test mean/simple-knuth-test ()
   assert-equal(3.0d0, mean/knuth(data));
 end test mean/simple-knuth-test;
 
+define test mean/harmonic-test ()
+  let data = as(limited(<vector>, of: <double-float>), #[40.0d0, 60.0d0]);
+  assert-equal(48.0d0, mean/harmonic(data));
+end test mean/harmonic-test;
+
 define suite statistics-base-test-suite ()
   test mean/simple-knuth-test;
+  test mean/harmonic-test;
 end suite;

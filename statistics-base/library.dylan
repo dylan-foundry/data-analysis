@@ -13,5 +13,6 @@ define module statistics-base
   use format-out;
 
   export mean/simple,
-         mean/knuth;
+         mean/knuth,
+         mean/harmonic;
 end module statistics-base;

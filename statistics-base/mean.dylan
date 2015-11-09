@@ -23,3 +23,13 @@ define method mean/knuth
     mean
   end for
 end method mean/knuth;
+
+define method mean/harmonic
+    (sample :: limited(<vector>, of: <double-float>))
+ => (mean :: <double-float>)
+  for (d :: <double-float> in sample,
+       sum :: <double-float> = 0.0d0 then sum + (1.0d0 / d))
+  finally
+    as(<double-float>, sample.size) / sum
+  end for
+end method mean/harmonic;
