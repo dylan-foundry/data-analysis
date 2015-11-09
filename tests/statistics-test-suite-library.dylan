@@ -2,7 +2,7 @@ module: dylan-user
 
 define library statistics-test-suite
   use common-dylan;
-  use statistics;
+  use statistics-base;
   use testworks;
   use system;
 
@@ -11,7 +11,7 @@ end library;
 
 define module statistics-test-suite
   use common-dylan;
-  use statistics;
+  use statistics-base;
   use testworks;
 
   export statistics-test-suite;

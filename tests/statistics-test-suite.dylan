@@ -1,10 +1,6 @@
 module: statistics-test-suite
-synopsis: Test suite for the statistics library.
-
-define test example-test ()
-  assert-true(#t);
-end test example-test;
+synopsis: Test suite for the statistics libraries.
 
 define suite statistics-test-suite ()
-  test example-test;
+  suite statistics-base-test-suite;
 end suite;
