@@ -12,7 +12,13 @@ define test mean/harmonic-test ()
   assert-equal(48.0d0, mean/harmonic(data));
 end test mean/harmonic-test;
 
+define test mean/geometric-test ()
+  let data = as(limited(<vector>, of: <double-float>), #[2.0d0, 8.0d0]);
+  assert-equal(4.0d0, mean/geometric(data));
+end test mean/geometric-test;
+
 define suite statistics-base-test-suite ()
   test mean/simple-knuth-test;
   test mean/harmonic-test;
+  test mean/geometric-test;
 end suite;

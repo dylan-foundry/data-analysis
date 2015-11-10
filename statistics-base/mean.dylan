@@ -33,3 +33,13 @@ define method mean/harmonic
     as(<double-float>, sample.size) / sum
   end for
 end method mean/harmonic;
+
+define method mean/geometric
+    (sample :: limited(<vector>, of: <double-float>))
+ => (mean :: <double-float>)
+  for (d in sample,
+       sum :: <double-float> = 0.0d0 then sum + log(d))
+  finally
+    exp(sum / as(<double-float>, sample.size))
+  end for
+end method mean/geometric;
