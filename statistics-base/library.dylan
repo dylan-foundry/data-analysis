@@ -18,4 +18,10 @@ define module statistics-base
          mean/knuth,
          mean/harmonic,
          mean/geometric;
+
+  export minimum+maximum,
+         minimum,
+         minimum/trimmed,
+         maximum,
+         maximum/trimmed;
 end module statistics-base;
