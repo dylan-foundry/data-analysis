@@ -17,8 +17,12 @@ define test mean/geometric-test ()
   assert-equal(4.0d0, mean/geometric(data));
 end test mean/geometric-test;
 
-define suite statistics-base-test-suite ()
+define suite mean-test-suite ()
   test mean/simple-knuth-test;
   test mean/harmonic-test;
   test mean/geometric-test;
+end suite;
+
+define suite statistics-base-test-suite ()
+  suite mean-test-suite;
 end suite;
