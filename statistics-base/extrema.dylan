@@ -1,5 +1,5 @@
 Module: statistics-base
-Synopsis: Implementations of various algorithms for calculating a mean.
+Synopsis: Implementations of various algorithms for calculating extrema.
 Author: Bruce Mitchener, Jr.
 Copyright: See LICENSE file in this distribution.
 
