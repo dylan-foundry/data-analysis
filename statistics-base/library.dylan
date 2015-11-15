@@ -26,4 +26,9 @@ define module statistics-base
          maximum/trimmed;
 
   export scale;
+
+  export variance/sample,
+         variance/population,
+         standard-deviation/sample,
+         standard-deviation/population;
 end module statistics-base;

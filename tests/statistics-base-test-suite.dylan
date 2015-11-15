@@ -80,8 +80,23 @@ define suite scale-test-suite ()
   test scale-test;
 end suite;
 
+define constant $variance-data
+ = as(limited(<vector>, of: <double-float>),
+      #[2.0d0, 4.0d0, 4.0d0, 4.0d0, 5.0d0, 5.0d0, 7.0d0, 9.0d0]);
+
+define test variance+standard-deviation-test ()
+  assert-equal(5.0d0, mean/arithmetic($variance-data));
+  assert-equal(4.0d0, variance/population($variance-data));
+  assert-equal(2.0d0, standard-deviation/population($variance-data));
+end test variance+standard-deviation-test;
+
+define suite variance-test-suite ()
+  test variance+standard-deviation-test;
+end suite;
+
 define suite statistics-base-test-suite ()
   suite mean-test-suite;
   suite extrema-test-suite;
   suite scale-test-suite;
+  suite variance-test-suite;
 end suite;

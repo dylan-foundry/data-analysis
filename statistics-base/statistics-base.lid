@@ -4,3 +4,4 @@ Files: library
        mean
        extrema
        scale
+       variance
