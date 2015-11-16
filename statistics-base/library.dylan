@@ -24,4 +24,6 @@ define module statistics-base
          minimum/trimmed,
          maximum,
          maximum/trimmed;
+
+  export scale;
 end module statistics-base;

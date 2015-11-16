@@ -63,7 +63,25 @@ define suite extrema-test-suite ()
   test extrema/maxima-test;
 end suite;
 
+define test scale-test ()
+  let scale-data
+    = as(limited(<vector>, of: <double-float>),
+         #[0.0d0, 2.0d0, 4.0d0, 6.0d0, 8.0d0, 10.0d0]);
+  let scaled = scale(scale-data, 0.0d0, 5.0d0);
+  assert-equal(0.0d0, scaled[0]);
+  assert-equal(1.0d0, scaled[1]);
+  assert-equal(2.0d0, scaled[2]);
+  assert-equal(3.0d0, scaled[3]);
+  assert-equal(4.0d0, scaled[4]);
+  assert-equal(5.0d0, scaled[5]);
+end test scale-test;
+
+define suite scale-test-suite ()
+  test scale-test;
+end suite;
+
 define suite statistics-base-test-suite ()
   suite mean-test-suite;
   suite extrema-test-suite;
+  suite scale-test-suite;
 end suite;

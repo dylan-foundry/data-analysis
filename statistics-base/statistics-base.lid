@@ -3,3 +3,4 @@ Target-Type: dll
 Files: library
        mean
        extrema
+       scale
