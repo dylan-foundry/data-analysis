@@ -14,8 +14,8 @@ define module statistics-base
   use transcendentals;
   use format-out;
 
-  export mean/simple,
-         mean/knuth,
+  export mean/fast,
+         mean/arithmetic,
          mean/harmonic,
          mean/geometric;
 

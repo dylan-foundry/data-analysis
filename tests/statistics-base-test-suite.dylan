@@ -1,11 +1,11 @@
 module: statistics-test-suite
 synopsis: Test suite for the statistics-base library.
 
-define test mean/simple-knuth-test ()
+define test mean/arithmetic-test ()
   let data = as(limited(<vector>, of: <double-float>), #[1.0d0, 3.0d0, 5.0d0]);
-  assert-equal(3.0d0, mean/simple(data));
-  assert-equal(3.0d0, mean/knuth(data));
-end test mean/simple-knuth-test;
+  assert-equal(3.0d0, mean/fast(data));
+  assert-equal(3.0d0, mean/arithmetic(data));
+end test mean/arithmetic-test;
 
 define test mean/harmonic-test ()
   let data = as(limited(<vector>, of: <double-float>), #[40.0d0, 60.0d0]);
@@ -18,7 +18,7 @@ define test mean/geometric-test ()
 end test mean/geometric-test;
 
 define suite mean-test-suite ()
-  test mean/simple-knuth-test;
+  test mean/arithmetic-test;
   test mean/harmonic-test;
   test mean/geometric-test;
 end suite;

@@ -3,7 +3,7 @@ Synopsis: Implementations of various algorithms for calculating a mean.
 Author: Bruce Mitchener, Jr.
 Copyright: See LICENSE file in this distribution.
 
-define method mean/simple
+define method mean/fast
     (sample :: limited(<vector>, of: <double-float>))
  => (mean :: <double-float>)
   for (d in sample,
@@ -11,9 +11,9 @@ define method mean/simple
   finally
     sum / as(<double-float>, sample.size)
   end for
-end method mean/simple;
+end method mean/fast;
 
-define method mean/knuth
+define method mean/arithmetic
     (sample :: limited(<vector>, of: <double-float>))
  => (mean :: <double-float>)
   for (d in sample,
@@ -22,7 +22,7 @@ define method mean/knuth
   finally
     mean
   end for
-end method mean/knuth;
+end method mean/arithmetic;
 
 define method mean/harmonic
     (sample :: limited(<vector>, of: <double-float>))
