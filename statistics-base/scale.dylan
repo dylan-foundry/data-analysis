@@ -4,9 +4,9 @@ Author: Bruce Mitchener, Jr.
 Copyright: See LICENSE file in this distribution.
 
 define method scale
-    (sample :: limited(<vector>, of: <double-float>),
+    (sample :: <double-float-vector>,
      lower-bound :: <double-float>, upper-bound :: <double-float>)
- => (res :: limited(<vector>, of: <double-float>))
+ => (res :: <double-float-vector>)
   let (min-range, max-range) = minimum+maximum(sample);
   let a = (upper-bound - lower-bound) / (max-range - min-range);
   let b = upper-bound - (a * max-range);

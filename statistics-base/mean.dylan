@@ -4,7 +4,7 @@ Author: Bruce Mitchener, Jr.
 Copyright: See LICENSE file in this distribution.
 
 define method mean/fast
-    (sample :: limited(<vector>, of: <double-float>))
+    (sample :: <double-float-vector>)
  => (mean :: <double-float>)
   for (d in sample,
        sum :: <double-float> = 0.0d0 then sum + d)
@@ -14,7 +14,7 @@ define method mean/fast
 end method mean/fast;
 
 define method mean/arithmetic
-    (sample :: limited(<vector>, of: <double-float>))
+    (sample :: <double-float-vector>)
  => (mean :: <double-float>)
   for (d in sample,
        counter :: <double-float> = 1.0d0 then counter + 1.0d0,
@@ -25,7 +25,7 @@ define method mean/arithmetic
 end method mean/arithmetic;
 
 define method mean/harmonic
-    (sample :: limited(<vector>, of: <double-float>))
+    (sample :: <double-float-vector>)
  => (mean :: <double-float>)
   for (d in sample,
        sum :: <double-float> = 0.0d0 then sum + (1.0d0 / d))
@@ -35,7 +35,7 @@ define method mean/harmonic
 end method mean/harmonic;
 
 define method mean/geometric
-    (sample :: limited(<vector>, of: <double-float>))
+    (sample :: <double-float-vector>)
  => (mean :: <double-float>)
   for (d in sample,
        sum :: <double-float> = 0.0d0 then sum + log(d))

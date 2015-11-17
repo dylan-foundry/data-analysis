@@ -4,7 +4,7 @@ Author: Bruce Mitchener, Jr.
 Copyright: See LICENSE file in this distribution.
 
 define method variance-internal
-    (sample :: limited(<vector>, of: <double-float>))
+    (sample :: <double-float-vector>)
  => (sum-squares :: <double-float>)
   let mean :: <double-float> = 0.0d0;
   let previous-mean :: <double-float> = 0.0d0;
@@ -20,27 +20,27 @@ define method variance-internal
 end method variance-internal;
 
 define method variance/sample
-    (sample :: limited(<vector>, of: <double-float>))
+    (sample :: <double-float-vector>)
  => (variance :: <double-float>)
   let sum-squares = variance-internal(sample);
   sum-squares / as(<double-float>, size(sample) - 1)
 end method variance/sample;
 
 define method variance/population
-    (sample :: limited(<vector>, of: <double-float>))
+    (sample :: <double-float-vector>)
  => (variance :: <double-float>)
   let sum-squares = variance-internal(sample);
   sum-squares / as(<double-float>, size(sample))
 end method variance/population;
 
 define method standard-deviation/sample
-    (sample :: limited(<vector>, of: <double-float>))
+    (sample :: <double-float-vector>)
  => (standard-deviation :: <double-float>)
   sqrt(variance/sample(sample))
 end method standard-deviation/sample;
 
 define method standard-deviation/population
-    (sample :: limited(<vector>, of: <double-float>))
+    (sample :: <double-float-vector>)
  => (standard-deviation :: <double-float>)
   sqrt(variance/population(sample))
 end method standard-deviation/population;

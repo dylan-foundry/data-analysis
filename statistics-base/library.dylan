@@ -14,6 +14,11 @@ define module statistics-base
   use transcendentals;
   use format-out;
 
+  export <double-float-vector>,
+         <double-float?-vector>,
+         <numeric-sequence>,
+         double-float-vector;
+
   export mean/fast,
          mean/arithmetic,
          mean/harmonic,

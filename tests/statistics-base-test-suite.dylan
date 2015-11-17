@@ -2,18 +2,18 @@ module: statistics-test-suite
 synopsis: Test suite for the statistics-base library.
 
 define test mean/arithmetic-test ()
-  let data = as(limited(<vector>, of: <double-float>), #[1.0d0, 3.0d0, 5.0d0]);
+  let data = double-float-vector(#[1.0d0, 3.0d0, 5.0d0]);
   assert-equal(3.0d0, mean/fast(data));
   assert-equal(3.0d0, mean/arithmetic(data));
 end test mean/arithmetic-test;
 
 define test mean/harmonic-test ()
-  let data = as(limited(<vector>, of: <double-float>), #[40.0d0, 60.0d0]);
+  let data = double-float-vector(#[40.0d0, 60.0d0]);
   assert-equal(48.0d0, mean/harmonic(data));
 end test mean/harmonic-test;
 
 define test mean/geometric-test ()
-  let data = as(limited(<vector>, of: <double-float>), #[2.0d0, 8.0d0]);
+  let data = double-float-vector(#[2.0d0, 8.0d0]);
   assert-equal(4.0d0, mean/geometric(data));
 end test mean/geometric-test;
 
@@ -24,8 +24,7 @@ define suite mean-test-suite ()
 end suite;
 
 define constant $extrema-data
-  = as(limited(<vector>, of: <double-float>),
-       #[-2.0d0, 0.0d0, -5.0d0, 8.0d0, 6.0d0]);
+  = double-float-vector(#[-2.0d0, 0.0d0, -5.0d0, 8.0d0, 6.0d0]);
 
 define test extrema/both-test ()
   let (minimum, maximum) = minimum+maximum($extrema-data);
@@ -65,8 +64,7 @@ end suite;
 
 define test scale-test ()
   let scale-data
-    = as(limited(<vector>, of: <double-float>),
-         #[0.0d0, 2.0d0, 4.0d0, 6.0d0, 8.0d0, 10.0d0]);
+    = double-float-vector(#[0.0d0, 2.0d0, 4.0d0, 6.0d0, 8.0d0, 10.0d0]);
   let scaled = scale(scale-data, 0.0d0, 5.0d0);
   assert-equal(0.0d0, scaled[0]);
   assert-equal(1.0d0, scaled[1]);
@@ -81,8 +79,8 @@ define suite scale-test-suite ()
 end suite;
 
 define constant $variance-data
- = as(limited(<vector>, of: <double-float>),
-      #[2.0d0, 4.0d0, 4.0d0, 4.0d0, 5.0d0, 5.0d0, 7.0d0, 9.0d0]);
+ = double-float-vector(#[2.0d0, 4.0d0, 4.0d0, 4.0d0,
+                         5.0d0, 5.0d0, 7.0d0, 9.0d0]);
 
 define test variance+standard-deviation-test ()
   assert-equal(5.0d0, mean/arithmetic($variance-data));

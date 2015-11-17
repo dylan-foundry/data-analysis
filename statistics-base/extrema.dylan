@@ -4,7 +4,7 @@ Author: Bruce Mitchener, Jr.
 Copyright: See LICENSE file in this distribution.
 
 define method minimum+maximum
-    (sample :: limited(<vector>, of: <double-float>))
+    (sample :: <double-float-vector>)
  => (minimum :: <double-float>, maximum :: <double-float>)
   let minimum :: <double-float> = sample[0];
   let maximum :: <double-float> = sample[0];
@@ -19,7 +19,7 @@ define method minimum+maximum
 end method minimum+maximum;
 
 define method minimum
-    (sample :: limited(<vector>, of: <double-float>))
+    (sample :: <double-float-vector>)
  => (minimum :: <double-float>)
   for (d in sample,
        minimum :: <double-float> = sample[0] then min(minimum, d))
@@ -29,7 +29,7 @@ define method minimum
 end method minimum;
 
 define method minimum/trimmed
-    (sample :: limited(<vector>, of: <double-float>),
+    (sample :: <double-float-vector>,
      lower-limit :: <double-float>,
      #key inclusive? = #t)
  => (minimum :: <double-float>)
@@ -54,7 +54,7 @@ define method minimum/trimmed
 end method minimum/trimmed;
 
 define method maximum
-    (sample :: limited(<vector>, of: <double-float>))
+    (sample :: <double-float-vector>)
  => (maximum :: <double-float>)
   for (d in sample,
        maximum :: <double-float> = sample[0] then max(maximum, d))
@@ -64,7 +64,7 @@ define method maximum
 end method maximum;
 
 define method maximum/trimmed
-    (sample :: limited(<vector>, of: <double-float>),
+    (sample :: <double-float-vector>,
      lower-limit :: <double-float>,
      #key inclusive? = #t)
  => (maximum :: <double-float>)
