@@ -55,7 +55,7 @@ end method minimum;
 define method minimum/trimmed
     (sample :: <double-float-vector>,
      lower-limit :: <double-float>,
-     #key inclusive? = #t)
+     #key inclusive? :: <boolean> = #t)
  => (minimum :: <double-float>)
   for (d in sample,
        minimum :: <double-float> = sample[0]
@@ -90,7 +90,7 @@ end method maximum;
 define method maximum/trimmed
     (sample :: <double-float-vector>,
      lower-limit :: <double-float>,
-     #key inclusive? = #t)
+     #key inclusive? :: <boolean> = #t)
  => (maximum :: <double-float>)
   for (d in sample,
        maximum :: <double-float> = sample[0]
