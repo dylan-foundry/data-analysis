@@ -3,6 +3,11 @@ Synopsis: Scale a vector of values to fit within a range.
 Author: Bruce Mitchener, Jr.
 Copyright: See LICENSE file in this distribution.
 
+define open generic scale
+    (sample :: <numeric-sequence>,
+     lower-bound :: <number>, upper-bound :: <number>)
+ => (res :: <numeric-sequence>);
+
 define method scale
     (sample :: <double-float-vector>,
      lower-bound :: <double-float>, upper-bound :: <double-float>)

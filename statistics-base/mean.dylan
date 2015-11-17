@@ -3,6 +3,22 @@ Synopsis: Implementations of various algorithms for calculating a mean.
 Author: Bruce Mitchener, Jr.
 Copyright: See LICENSE file in this distribution.
 
+define open generic mean/fast
+    (sample :: <numeric-sequence>)
+ => (mean :: <number>);
+
+define open generic mean/arithmetic
+    (sample :: <numeric-sequence>)
+ => (mean :: <number>);
+
+define open generic mean/harmonic
+    (sample :: <numeric-sequence>)
+ => (mean :: <number>);
+
+define open generic mean/geometric
+    (sample :: <numeric-sequence>)
+ => (mean :: <number>);
+
 define method mean/fast
     (sample :: <double-float-vector>)
  => (mean :: <double-float>)

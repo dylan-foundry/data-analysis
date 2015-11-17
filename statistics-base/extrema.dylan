@@ -3,6 +3,30 @@ Synopsis: Implementations of various algorithms for calculating extrema.
 Author: Bruce Mitchener, Jr.
 Copyright: See LICENSE file in this distribution.
 
+define open generic minimum+maximum
+    (sample :: <numeric-sequence>)
+ => (minimum :: <number>, maximum :: <number>);
+
+define open generic minimum
+    (sample :: <numeric-sequence>)
+ => (minimum :: <number>);
+
+define open generic minimum/trimmed
+    (sample :: <numeric-sequence>,
+     lower-limit :: <number>,
+     #key inclusive? :: <boolean>)
+ => (minimum :: <number>);
+
+define open generic maximum
+    (sample :: <numeric-sequence>)
+ => (maximum :: <number>);
+
+define open generic maximum/trimmed
+    (sample :: <numeric-sequence>,
+     upper-limit :: <number>,
+     #key inclusive? :: <boolean>)
+ => (maximum :: <number>);
+
 define method minimum+maximum
     (sample :: <double-float-vector>)
  => (minimum :: <double-float>, maximum :: <double-float>)

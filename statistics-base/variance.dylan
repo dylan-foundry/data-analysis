@@ -3,6 +3,22 @@ Synopsis: Calculating variance and standard deviation.
 Author: Bruce Mitchener, Jr.
 Copyright: See LICENSE file in this distribution.
 
+define open generic variance/sample
+    (sample :: <numeric-sequence>)
+ => (variance :: <number>);
+
+define open generic variance/population
+    (sample :: <numeric-sequence>)
+ => (variance :: <number>);
+
+define open generic standard-deviation/sample
+    (sample :: <numeric-sequence>)
+ => (standard-deviation :: <number>);
+
+define open generic standard-deviation/population
+    (sample :: <numeric-sequence>)
+ => (standard-deviation :: <number>);
+
 define method variance-internal
     (sample :: <double-float-vector>)
  => (sum-squares :: <double-float>)
