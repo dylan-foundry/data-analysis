@@ -26,7 +26,7 @@ import sphinxcontrib.dylan.themes as dylan_themes
 
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
-extensions = ['sphinxcontrib.dylan.domain']
+extensions = ['sphinxcontrib.dylan.domain', 'sphinx.ext.mathjax']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
