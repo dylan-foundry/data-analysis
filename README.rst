@@ -18,9 +18,11 @@ Additional functionality and libraries are welcome.
 
 Some immediate ideas for additions include:
 
+* Mode
 * Median
 * Weighted means
 * Trimmed means
+* Skewness, kurtosis
 * Absolute deviation
 * Covariance
 * Percentiles and quantiles
