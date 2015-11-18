@@ -64,3 +64,25 @@ lack of a package manager:
 * Add registry entries for the libraries from this
   repository that you plan to use.
 * Use it.
+
+Documentation
+-------------
+
+Documentation is built using `Sphinx`_. This can be
+installed via::
+
+    pip install -U Sphinx
+
+Then::
+
+    cd documentation
+    export PYTHONPATH=/path/to/opendylan/documentation/sphinx-extension
+    make html
+
+To build the documentation, you will currently need a
+clone of Open Dylan from git to have the correct version
+of the Sphinx extension. (Or you could clone that locally
+and use the path to it directly.)
+
+.. _Dylan: http://opendylan.org/
+.. _Sphinx: http://sphinx-doc.org/
