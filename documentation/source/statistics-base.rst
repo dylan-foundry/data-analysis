@@ -439,6 +439,33 @@ Means
 
      Returns the geometric mean of a numeric sequence.
 
+     For greater numerical accuracy, our implementation is based on
+     the exponentiation of the arithmetic mean of the natural logarithm
+     of each value in ``sample``.
+
+   :equivalent:
+
+     The geometric mean is given by:
+
+     .. math::
+
+        \left(\prod_{i=1}^na_i \right)^{1/n}
+
+     Our implementation is computed as follows:
+
+     .. math::
+
+        \exp\left[\frac1n\sum_{i=1}^n\ln a_i\right]
+
+   :example:
+
+     Assuming that ``dv`` contains the values ``#[2.0d0, 4.0d0, 8.0d0]``:
+
+     .. code-block:: dylan-console
+
+        ? mean/geometric(dv)
+        => 4.0d0
+
    :seealso:
 
      - :gf:`mean/arithmetic`
