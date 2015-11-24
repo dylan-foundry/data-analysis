@@ -1,4 +1,4 @@
-Module: statistics-base
+Module: statistics
 Synopsis: Calculating variance and standard deviation.
 Author: Bruce Mitchener, Jr.
 Copyright: See LICENSE file in this distribution.

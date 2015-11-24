@@ -6,6 +6,6 @@
   "license": "MIT",
   "default-target": "statistics",
   "tests": [
-    "statistics-test-suite-app"
+    "data-analysis-test-suite-app"
   ]
 }

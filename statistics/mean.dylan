@@ -1,4 +1,4 @@
-Module: statistics-base
+Module: statistics
 Synopsis: Implementations of various algorithms for calculating a mean.
 Author: Bruce Mitchener, Jr.
 Copyright: See LICENSE file in this distribution.

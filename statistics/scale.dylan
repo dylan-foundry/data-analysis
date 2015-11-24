@@ -1,4 +1,4 @@
-Module: statistics-base
+Module: statistics
 Synopsis: Scale a vector of values to fit within a range.
 Author: Bruce Mitchener, Jr.
 Copyright: See LICENSE file in this distribution.

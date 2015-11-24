@@ -1,9 +1,9 @@
-The STATISTICS-BASE library
-***************************
+The STATISTICS library
+**********************
 
-.. current-library:: statistics-base
+.. current-library:: statistics
 
-The ``STATISTICS-BASE`` library provides some basic statistical
+The ``STATISTICS`` library provides some basic statistical
 functions along with optimized implementations.
 
 .. note:: Currently, the statistical functions are only available
@@ -14,10 +14,10 @@ functions along with optimized implementations.
    :local:
 
 
-The STATISTICS-BASE module
-==========================
+The STATISTICS module
+=====================
 
-.. current-module:: statistics-base
+.. current-module:: statistics
 
 Types
 -----

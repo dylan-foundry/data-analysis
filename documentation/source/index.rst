@@ -6,5 +6,5 @@ Statistics
    :maxdepth: 2
 
    usage
-   statistics-base
+   statistics
    copyright

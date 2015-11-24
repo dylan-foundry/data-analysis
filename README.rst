@@ -1,10 +1,10 @@
-statistics
-==========
+data-analysis
+=============
 
-This is a general purpose collection of statistics
+This is a general purpose collection of data analysis
 libraries for the `Dylan`_ programming language.
 
-It currently consists of a ``statistics-base``
+It currently consists of a ``statistics``
 library providing some general statistical functions
 for calculating means, variance, deviation, and extrema.
 

@@ -1,4 +1,4 @@
-Library: statistics-base
+Library: statistics
 Target-Type: dll
 Files: library
        types

@@ -1,14 +1,14 @@
 Module: dylan-user
 
-define library statistics-base
+define library statistics
   use dylan;
   use common-dylan;
   use io;
 
-  export statistics-base;
-end library statistics-base;
+  export statistics;
+end library statistics;
 
-define module statistics-base
+define module statistics
   use dylan;
   use dylan-extensions;
   use transcendentals;
@@ -36,4 +36,4 @@ define module statistics-base
          variance/population,
          standard-deviation/sample,
          standard-deviation/population;
-end module statistics-base;
+end module statistics;
