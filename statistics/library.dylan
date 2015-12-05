@@ -36,4 +36,6 @@ define module statistics
          variance/population,
          standard-deviation/sample,
          standard-deviation/population;
+
+  export standard-scores;
 end module statistics;

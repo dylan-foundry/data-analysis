@@ -6,3 +6,4 @@ Files: library
        extrema
        scale
        variance
+       standardize

@@ -94,9 +94,22 @@ define suite variance-test-suite ()
   test variance+standard-deviation-test;
 end suite;
 
+define test standard-scores-test ()
+  let scores = standard-scores($variance-data);
+  assert-equal(-1.5d0, scores[0]);
+  assert-equal(0.0d0, scores[4]);
+  assert-equal(1.0d0, scores[6]);
+  assert-equal(2.0d0, scores[7]);
+end test standard-scores-test;
+
+define suite standard-scores-test-suite ()
+  test standard-scores-test;
+end suite;
+
 define suite statistics-test-suite ()
   suite mean-test-suite;
   suite extrema-test-suite;
   suite scale-test-suite;
   suite variance-test-suite;
+  suite standard-scores-test-suite;
 end suite;

@@ -367,6 +367,7 @@ Means
      - :gf:`mean/fast`
      - :gf:`mean/geometric`
      - :gf:`mean/harmonic`
+     - :gf:`standard-scores`
 
      - `Arithmetic Mean on Wikipedia <https://en.wikipedia.org/wiki/Arithmetic_mean>`__
 
@@ -565,6 +566,7 @@ Variance and Deviation
      - :gf:`variance/population`
      - :gf:`variance/sample`
      - :gf:`standard-deviation/sample`
+     - :gf:`standard-scores`
 
 .. method:: standard-deviation/population
    :specializer: <double-float-vector>
@@ -647,5 +649,43 @@ Variance and Deviation
 
    :parameter sample: An instance of :type:`<double-float-vector>`.
    :value variance: An instance of :drm:`<double-float>`.
+
+.. index:: z-scores
+.. index:: standardize
+.. generic-function:: standard-scores
+   :open:
+
+   :signature: standard-scores (population) => (scores)
+
+   :parameter population: An instance of :type:`<numeric-sequence>`.
+   :value scores: An instance of :type:`<numeric-sequence>`.
+
+   :equivalent:
+
+     The standard score of a value in a sequence is given by:
+
+     .. math::
+
+        z = {x- \mu \over \sigma}
+
+     Where:
+
+     * μ is the mean of the population
+     * σ is the standard deviation of the population
+
+   :seealso:
+
+     - :gf:`mean/arithmetic`
+     - :gf:`standard-deviation/population`
+
+.. method:: standard-scores
+   :specializer: <double-float-vector>
+   :sealed:
+
+   A specialized implementation of :gf:`standard-scores`
+   for :drm:`<double-float>`.
+
+   :parameter population: An instance of :type:`<double-float-vector>`.
+   :value scores: An instance of :type:`<double-float-vector>`.
 
 .. _The Art of Computer Programming: http://www.amazon.com/Art-Computer-Programming-Seminumerical-Algorithms/dp/0201896842/
