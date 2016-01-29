@@ -586,6 +586,12 @@ Variance and Deviation
    :parameter sample: An instance of :type:`<numeric-sequence>`.
    :value standard-deviation: An instance of :drm:`<number>`.
 
+   :description:
+
+     The standard-deviation calculation for a sample, rather than a complete
+     population, uses ``sample.size - 1`` rather than the sample size. This is
+     `Bessel's Correction`_.
+
    :seealso:
 
      - :gf:`variance/population`
@@ -689,3 +695,4 @@ Variance and Deviation
    :value scores: An instance of :type:`<double-float-vector>`.
 
 .. _The Art of Computer Programming: http://www.amazon.com/Art-Computer-Programming-Seminumerical-Algorithms/dp/0201896842/
+.. _Bessel's Correction: https://en.wikipedia.org/wiki/Bessel%27s_correction
